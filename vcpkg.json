@@ -1,0 +1,29 @@
+{
+    "$schema": "https://raw.githubusercontent.com/microsoft/vcpkg-tool/refs/tags/2026-07-27/docs/vcpkg.schema.json",
+    "name": "wasmedge",
+    "version": "0.18.0",
+    "builtin-baseline": "9e593bb18ea69cc5095e012465dcd675a822ed0d",
+    "dependencies": [
+        "spdlog"
+    ],
+    "default-features": [
+        "llvm"
+    ],
+    "features": {
+        "llvm": {
+            "description": "Enable WasmEdge LLVM-based compilation runtime.",
+            "dependencies": [
+                "blake3",
+                "llvm",
+                "zlib",
+                "zstd"
+            ]
+        }
+    },
+    "overrides": [
+        {
+            "name": "fmt",
+            "version": "12.1.0"
+        }
+    ]
+}
